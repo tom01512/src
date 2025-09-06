@@ -1,0 +1,136 @@
+@use '../foundation' as *;
+
+.c-works__items{
+    display: grid;
+    color: $color-black;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: stretch;
+    @include mq("sm") {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    @include mq("md") {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include mq("xl") {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+
+.c-work__item {
+    display: block;
+    border: 1px solid $color-black;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    padding: prem(16);
+    position: relative;
+
+    &::after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color:#fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: prem(32);
+        top: 0;
+        left: 0;
+        font-weight: bold;
+        -webkit-text-stroke: 1px #333;
+        font-family: $font-family-ttl;
+        transition: .6s all ease;
+        content: "VIEW MORE";
+        opacity: 0;
+        background:  rgba(3,3,3,.8);
+    }
+
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+    }
+
+    @media (any-hover: hover){
+        &:hover{
+            &::after{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.c-work__item--ttl{
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    display: inline-block;
+    font-size: prem(22);
+    margin-top: prem(2);
+    margin-bottom: prem(10);
+    position: relative;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background:#333;
+        bottom: -4px;
+        transform: scale(0, 1);
+        transform-origin: right top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+        transition: transform 0.3s;  /*変形の時間*/
+    }
+}
+
+.c-work__item--img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        aspect-ratio: 320/320;
+        overflow: hidden;
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            max-width: 100%;
+        }
+    }
+
+.c-work__item--tags {
+    margin-top: prem(10);
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .75rem;
+
+        li{
+
+            font-size: prem(18);
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 1px;
+            padding: prem(4) prem(8) prem(6);
+            border-radius:prem(30);
+            -webkit-transition: 0.3s;
+            transition: 0.3s all ease;
+            display: block;
+            background-color: #333;
+            border: 1px solid #333;
+            color: #fff;
+            margin-bottom: .4rem;
+        }
+    }
+}

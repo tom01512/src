@@ -1,0 +1,26 @@
+@use '../foundation' as *;
+.u-work__btn{
+    
+    top: 60%;
+    transition: .4s all ease;
+    z-index: 2000;
+    position: static;
+    display: flex;
+    justify-content: center;
+    transition: .4s all ease;
+    @include mq("md") {
+        position: absolute;
+        right: 8%;
+    }
+    @include mq("lg") {
+        right: 10%;
+    }
+
+}
+
+.js-workBtn{
+    position: static !important;
+    display: flex;
+    justify-content: center;
+    transition: .4s all ease;
+}

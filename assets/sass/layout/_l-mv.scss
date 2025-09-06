@@ -1,0 +1,9 @@
+@use '../foundation' as *;
+
+.l-mv {
+    margin-top: prem(128);
+}
+
+.l-mv__inner{
+    overflow: hidden;
+}

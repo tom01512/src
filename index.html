@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>コーディング効率化講座</title>
+    <meta name="description" content="トップページの説明" />
+    <meta name="keywords" content="キーワード" />
+    <!-- ogp -->
+    <meta property="og:title" content="サイト名" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="サイトのドメイン" />
+    <meta property="og:image" content="OGP IMAGE" />
+    <meta property="og:site_name" content="サイトのドメイン" />
+    <meta property="og:description" content="トップページの説明" />
+    <!-- ファビコン -->
+    <link rel="icon" href="">
+    <link rel="apple-touch-icon" href="">
+    <!--  FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/zdw4akt.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <svg class="p-header__overlay" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path id="overlayPath" class="overlayPath" vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z" />
+    </svg>
+    <div class="p-header__drawer js-drawer">
+        <button id="toggle" class="p-header__hamburger" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+            <span class="p-header__hamburgerLine"></span>
+        </button>
+        <nav id="nav" class="p-header__drawerNav" aria-hidden="true">
+            <ul id="menu" class="p-header__drawerMenu">
+            <li>Menu 01</li>
+            <li>Menu 02</li>
+            <li>Mnue 03</li>
+            </ul>
+        </nav>
+    </div>
+    <header class="header l-header">
+        <div class="p-header__inner">
+            <div class="p-header__occupation">
+                フリーランスのWEBコーダー
+            </div>
+         </div>
+    </header>
+
+    <main id="main" class="l-main">
+        <section id="mv" class="l-mv js-mv">
+            <div class="l-mv__inner">
+                <div class="p-mv__title js-mv__title">
+                    <div class="p-mv__title--container">
+                        <a href="">
+                            <h1 class="c-word">
+                                <span class="c-word__rect"></span>
+                                <span class="c-word__text">TOM'S</span>
+                            </h1><br>
+                            <h1 class="c-word">
+                                <span class="c-word__rect"></span>
+                                <span class="c-word__text">PORTFOLIO</span>
+                            </h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-mv__images p-mv__images--md">
+                    <div class="p-mv__images--grid">
+                        <div class="p-mv__image p-mv__image01"><a href="#"><img src="./assets/img/product-image/product-image01.png" alt=""></a></div>
+                        <div class="p-mv__image p-mv__image02"><a href="#"><img src="./assets/img/product-image/product-image02.png" alt=""></a></div>
+                        <div class="p-mv__image p-mv__image03"><a href="#"><img src="./assets/img/product-image/product-image03.png" alt=""></a></div>
+                        <div class="p-mv__image p-mv__image04"><a href="#"><img src="./assets/img/product-image/product-image04.png" alt=""></a></div>
+                        <div class="p-mv__image p-mv__image05"><a href="#"><img src="./assets/img/product-image/product-image05.png" alt=""></a></div>
+                    </div>
+                </div>
+
+                <div class="p-mv__images p-mv__images--sm">
+                    <div class="p-mv__images--wrap">
+                        <div class="p-mv__image p-mv__image01"><a href="#"><img src="./assets/img/product-image/product-image01.png" alt=""></a></div>
+                        <div class="p-mv__image p-mv__image02 "><a href="#" class="js-parallax" ><img src="./assets/img/product-image/product-image01.png" alt=""></a></div>
+                        <div class="p-mv__image p-mv__image03 "><a href="#" class="js-parallax" ><img src="./assets/img/product-image/product-image03.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="l-about">
+            <div class="p-about">
+                <div class="p-about__ttl">
+                    <h2 class="p-about__ttlItem p-about__ttlItem--top">YOUR WEB TEAM</h2><br>
+                    <h2 class="p-about__ttlItem p-about__ttlItem--bottom">REPRESENTATIVE</h2>
+                </div>
+                <div class="p-about__text">
+                    あなたのチームのWEB制作担当として全力で課題解決に向けてサポートさせていただきます。
+                </div>
+            </div>
+        </section>
+        <section id="work" class="l-work">
+            <div class="p-work ">
+                <div class="p-work__header">
+                    <div class="p-work__ttl c-section__ttl">
+                        <h2>WORK</h2>
+                    </div>
+                    <div class="p-work__text">
+                        <p class="p-work__text--left">CODING</p>
+                        <p class="p-work__text--right">DEVELOPMENT</p>
+                    </div>
+                </div>
+                <div class="p-work__swiper ">
+                    <div class=" swiper js-frontWorkSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href=""><img src="./assets/img/product-image/product-image03.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href=""><img src="./assets/img/product-image/product-image02.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href=""><img src="./assets/img/product-image/product-image01.png" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-work__btn c-more__btn">
+                    <a href="" class="c-more__btn--link">
+                        <p>制作実績一覧を見る</p>
+                        <span><img src="./assets/img/common/more-arrow.png" alt="制作実績一覧を見る"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="service" class="l-serivce">
+            <div class="p-service">
+                <div class="p-service__header">
+                    <div class="p-service__ttl c-section__ttl">
+                        <h2>SERVICE</h2>
+                    </div>
+                </div>
+                <div class="p-service__body">
+                    <div class="p-service__items">
+                        <div class="js-serviceItemSticky">
+                            <div id="service--code" class="c-service__item c-service__item--coding">
+                                <h3>CORDING</h3>
+                                <div class="c-service__item--icons">
+                                    <div class="c-service__icon c-service__icon--html">HTML</div>
+                                    <div class="c-service__icon c-service__icon--css">CSS</div>
+                                    <div class="c-service__icon c-service__icon--js">JS</div>
+                                </div>
+                                <div class="c-service__item--text">
+                                HTML / CSS / JavaScript をベースに、洗練されたフロントエンドを構築。
+    デザインカンプの忠実な再現はもちろん、アニメーションやインタラクションを取り入れることで、ユーザー体験を高めるモダンなUIをご提案します。
+    視覚的な美しさと操作性の両立を重視し、あらゆるデバイスで快適に閲覧できるレスポンシブな設計にも対応しています。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-serviceItemSticky">
+                            <div class="c-service__item c-service__item--wp">
+                                <h3>SYSTEM</h3>
+                                <div class="c-service__item--icons">
+                                    <div class="c-service__icon c-service__icon--php">PHP</div>
+                                    <div class="c-service__icon c-service__icon--wp">WP</div>
+                                    <div class="c-service__icon c-service__icon--laravel">LARAVEL</div>
+                                </div>
+                                <div class="c-service__item--text">
+                                    PHPをベースに、WORDPRESSなどを使って、更新しやすく運用性に優れたWebサイトを構築します。
+ニュース記事やブログ投稿などの情報発信機能、お問い合わせページの設置に対応。
+オリジナルのテーマ制作により、独自のデザインや要件にも柔軟にお応え可能です。
+クライアント様の目的に合わせた機能追加も承ります。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-serviceItemSticky">
+                            <div class="c-service__item c-service__item--ec">
+                                <h3>EC SITE</h3>
+                                <div class="c-service__item--icons">
+                                    <div class="c-service__icon c-service__icon--ec">SHOPIFY</div>
+                                </div>
+                                <div class="c-service__item--text">
+                                Shopifyの機能性を最大限に活かし、ユーザー体験に優れたECサイトを設計・構築いたします。
+テーマカスタマイズやアプリ連携による機能拡張、売上向上を意識した導線設計にも対応。
+スモールスタートから本格運用まで、フェーズに合わせた柔軟なご提案が可能です。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer" class="l-footer">
+            <div class="p-footer">
+                <div class="p-footer__contact">
+                    <a href="">
+                        <h2>CONTACT</h2>
+                    </a>
+                </div>
+                <div class="p-footer__bottom">
+                    <a href="">
+                        TW
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script><!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script><!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script><!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.37/bundled/lenis.min.js"></script><!-- Lenis -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

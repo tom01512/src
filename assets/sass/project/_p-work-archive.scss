@@ -1,0 +1,50 @@
+@use "../foundation" as *;
+
+.p-works__contents {
+    background: #fff;
+    padding-top: prem(64);
+}
+
+.p-works__category {
+    background: #fff;
+    margin-bottom: prem(64);
+    h3 {
+        font-size: prem(32);
+        font-weight: bold;
+        font-family: $font-family-ttl;
+        text-align: center;
+        line-height: 1;
+        color: $color-black;
+        letter-spacing: 2px;
+    }
+    ul {
+        margin-top: prem(32);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: prem(8);
+        li {
+            a {
+                display: block;
+                letter-spacing: 1.2px;
+                font-size: prem(20);
+                padding: prem(2) prem(12) prem(4);
+                border-radius: prem(40);
+                border: 2px solid $color-black;
+                display: block;
+                color: #fff;
+                background: $color-black;
+                &:hover {
+                        color: $color-black;
+                        background: #fff;
+                    }
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $color-black;
+                        background: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

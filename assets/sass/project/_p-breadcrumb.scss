@@ -1,0 +1,38 @@
+@use '../foundation' as *;
+
+.p-breadcrumb{
+    color: $color-black;
+    background: #fff;
+    border-top: 1px solid $color-black;
+    border-bottom: 1px solid $color-black;
+    padding: prem(8) prem(2);
+    font-size: prem(12);
+
+    @include mq("md") {
+        font-size: prem(14);
+        padding: prem(8) prem(32);
+    }
+
+    span{
+        padding: 0 prem(4);
+        display: inline-block;
+        line-height: 1.68;
+    }
+
+    .breadcrumbs, .breadcrumbs * {
+        text-transform: uppercase;
+    }
+
+
+
+    .home{
+            i{
+                line-height: 1.68;
+                display: inline-block;
+                padding:0 prem(4);
+                transform: translateY(-1px);
+                color: #3682B3;
+            }
+
+    }
+}

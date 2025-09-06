@@ -1,0 +1,28 @@
+@use '../foundation' as *;
+.c-section__ttl{
+    h2{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: prem(-20);
+        font-weight: 400;
+        font-size: prem(24);
+        letter-spacing: prem(12);
+        line-height: 1.5;
+        font-family: $font-family-ttl;
+    }
+}
+
+.js-sectionTtl{
+    h2{
+        top: 0;
+        transition: .2s all ease;
+        font-size: prem(70);
+        @include mq("sm") {
+            font-size: prem(80);
+        }
+        @include mq("md") {
+            font-size: prem(140);
+        }
+    }
+}

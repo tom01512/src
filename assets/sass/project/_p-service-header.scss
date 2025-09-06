@@ -1,0 +1,26 @@
+@use '../foundation' as *;
+
+.p-service{
+    position: relative;
+}
+
+.p-service__header{
+    text-align: center;
+    position: relative;
+    margin-top: prem(80);
+
+    p{
+        font-family: $fontEn-family-base;
+        font-size: prem(24);
+        letter-spacing: prem(6);
+        font-weight: bold;
+        line-height: 1;
+    }
+}
+
+.p-service__text{
+    display: grid;
+    grid-template-columns:1fr;
+    gap: prem(24);
+}
+

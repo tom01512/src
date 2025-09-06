@@ -1,0 +1,12 @@
+@use '../foundation' as *;
+
+.l-work{
+    overflow: hidden;
+    position: relative;
+    padding-top: prem(100);
+    padding-bottom: prem(100);
+    @include mq("md") {
+        margin-top: prem(80);
+    }
+    
+}

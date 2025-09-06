@@ -1,0 +1,104 @@
+@use '../foundation' as *;
+
+//=====================================
+//  pc-swiper
+//=====================================
+
+.p-single__work--swiper{
+    position: relative;
+    width:100%;
+    margin: 0 auto;
+
+    @include mq("md"){
+        width: 80%;
+    }
+
+    // Swiper ページネーション（ドット）
+    .swiper-pagination {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+        opacity: 0.5;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+
+        &-active {
+        background: #333;
+        opacity: 1;
+        transform: scale(1.2);
+        }
+    }
+    }
+
+// 矢印ナビゲーション
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+        backdrop-filter: blur(4px);
+        color: #fff;
+        transition: all 0.3s ease;
+        top: 50%;
+        transform: translateY(-50%);
+
+        span{
+            width: prem(12);
+            height: prem(12);
+            border-color: #fff;
+        }
+
+
+        &::after {
+            font-size: 16px;
+        }
+
+        @media (any-hover: hover){
+            &:hover {
+                    background-color: rgba(0, 0, 0, 0.6);
+                }
+        }
+    }
+
+    .swiper-button-prev {
+        left: 10px;
+        padding-left: 2px;
+        span{
+            border-top:2px solid;
+            border-left:2px solid;
+            transform: rotate(-45deg);
+            display: block;
+        }
+    }
+    .swiper-button-next {
+        right: 10px;
+        padding-right: 2px;
+        span{
+            border-top:2px solid;
+            border-right:2px solid;
+            transform: rotate(45deg);
+            display: block;
+        }
+    }
+
+    // スクロールバー
+    .swiper-scrollbar {
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+
+    .swiper-scrollbar-drag {
+        background: #333;
+        border-radius: 2px;
+    }
+    }
+}

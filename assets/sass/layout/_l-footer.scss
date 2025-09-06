@@ -1,0 +1,11 @@
+@use '../foundation' as *;
+
+.l-footer{
+    height:20vh;
+    @include mq("md") {
+       height:25vh;
+    }
+     @include mq("md") {
+        height: 40vh;
+    }
+}

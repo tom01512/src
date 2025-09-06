@@ -1,0 +1,46 @@
+@use '../foundation' as *;
+
+.p-about{
+    position: relative;
+    overflow: hidden;
+}
+
+.p-about__ttl{
+    h2{
+        text-align: center;
+        margin-top: 0;
+        font-family: $font-family-ttl;
+        font-weight: 700;
+        white-space: nowrap;
+        font-size: 5.5vw;
+
+        @include mq("sm") {
+            font-size: 7vw;
+            font-weight: 400;
+             margin-top: 4.16vw;
+        }
+        @include mq("md") {
+            font-size: 11.1vw;
+            line-height: 1;
+        }
+    }
+
+}
+
+.p-about__ttlItem{
+    &--top{
+        letter-spacing: prem(14.5);
+        @include mq("sm") {
+           letter-spacing: prem(12);
+        }
+    }
+    &--bottom{
+        letter-spacing: prem(14);
+        @include mq("sm") {
+            letter-spacing: prem(15);
+        }
+
+        
+    }
+}
+

@@ -1,0 +1,23 @@
+@use '../foundation' as *;
+
+.p-about__text{
+    margin-top: 7.66vw;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: justify;
+    width:100%;
+    max-width: 500px;
+    padding: 0 16px;
+    font-size: prem(18);
+    line-height: 2.4;
+
+    @include mq("sm") {
+        font-size: prem(24);
+    }
+    @include mq("md") {
+        width: prem(580);
+        font-size: prem(30);
+        line-height: 3;
+        letter-spacing: prem(18);
+    }
+}

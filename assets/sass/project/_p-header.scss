@@ -1,0 +1,60 @@
+@use '../foundation' as *;
+
+
+.p-header__inner {
+    background: #333;
+    border-bottom: 1px solid #fff;
+    padding-left: prem(15);
+    padding-right: prem(15);
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    align-items: center;
+    @include mq("md") {
+        padding: 0 prem(24);
+    }
+}
+
+.p-header__logo {
+    max-width: prem(74);
+    width: 100%;
+    height: inherit;
+    @include mq("md") {
+        max-width: prem(100);
+    }
+}
+
+.p-header__logo a {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.p-header__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.p-header__occupation{
+    color: #fff;
+    font-size: prem(14);
+
+}
+
+.p-header__occupation--sub{
+    a{
+        h1{
+            font-size: prem(14);
+        }
+    }
+}
+
+
+.js-headerOccupation{
+    opacity: 1;
+    &.is-active {
+        opacity: 0;
+    }
+}

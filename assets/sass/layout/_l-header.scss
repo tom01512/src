@@ -1,0 +1,15 @@
+@use '../foundation' as *;
+
+.l-header {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: prem(60);
+    border-bottom: 1px solid #fff;
+    align-items: center;
+    @include mq("md") {
+        height: prem(80);
+    }
+}

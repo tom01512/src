@@ -1,0 +1,20 @@
+@use '../foundation' as *;
+
+.p-service__items{
+    position: relative;
+    height: 240vh;
+    padding-top: prem(136);
+    padding-bottom: prem(120);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: prem(40);
+    color: $color-black;
+
+    @include mq("md") {
+        height:240vw;
+        padding-top: prem(240);
+        padding-bottom: prem(240);
+    }
+}
+

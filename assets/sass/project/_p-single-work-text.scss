@@ -1,0 +1,69 @@
+@use '../foundation' as *;
+
+.p-work__single--text{
+    padding-top: prem(24);
+    width: 100%;
+    margin: 0  auto;
+    max-width: 100%;
+    @include mq("md"){
+        width: 80%;
+        padding-top: prem(40);
+    }
+}
+
+.p-work__single--list{
+    ul{
+        li{
+            flex-direction: column;
+            display: flex;
+            @include mq("md"){
+                flex-direction: row;
+                padding: prem(24) 0;
+            }
+
+            &:not(:last-child){
+                border-bottom: 1px solid #fff;
+            }
+
+            p{
+                font-size: prem(24);
+            }
+
+            .p-work__single--listTtl{
+                width: 100%;
+                letter-spacing: 2.4px;
+                background: #fff;
+                color: $color-black;
+                padding-left: prem(16);
+                @include mq("md"){
+                    width: 24%;
+                    border: 0;
+                    display: block;
+                    background: $color-black;
+                    color: #fff;
+                    padding: 0;
+                }
+            }
+
+            .p-work__single--listText{
+                width: 100%;
+                padding: prem(16) 0;
+                @include mq("md"){
+                    width: 76%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.p-work__single--listTextarea{
+    p{
+        line-height: 2;
+        font-size: prem(18) !important;
+        span{
+            color: #fff !important;
+            font-size: prem(18) !important;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@use '../foundation' as *;
+
+.c-service__item {
+    width: 90%;
+    margin: 0 auto;
+    padding: prem(8) prem(16) prem(16);
+    will-change: transform;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    0 6px 16px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease;
+    overflow: hidden;
+        h3{
+            font-family: $fontEn-family-base;
+            font-weight: 700;
+            letter-spacing: prem(4);
+            color: #1a1a1a;
+            font-size: prem(48);
+            @include mq("md") {
+               font-size: prem(60);
+            }
+        }
+
+    @include mq("md") {
+        width: 80%;
+        padding: prem(8) prem(48) prem(32);
+    }
+}
+
+
+.c-service__item--icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: prem(16);
+    margin-top: prem(12);
+ 
+}
+
+.c-service__icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: prem(12);
+    font-size: prem(20) ;
+    font-weight: bold;
+    padding: prem(16);
+    line-height: 1;
+
+    @include mq("md") {
+        padding: prem(16);
+        font-size: prem(40) ;
+    }
+
+    &--html{
+        background: #cf5c35;
+        color: #fff;
+        
+    }
+    &--css{
+        background: #4987aa;
+        color: #fff;
+    }
+    &--js{
+        background: #edad45;
+        color: #333;
+    }
+    &--php{
+        background: #4F5B93;
+        color: #fff;
+    }
+    &--wp{
+        background: #2A799F;
+        color: #fff;
+    }
+    &--laravel{
+        background: #F53003;
+        color: #fff;
+    }
+    &--ec{
+        background: #96BF4C;
+        color: #fff;
+    }
+}
+
+.c-service__item--text{
+    margin-top: prem(14);
+    font-size: prem(14);
+    font-weight: 500;
+    line-height: prem(25);
+    background: #fff;
+
+    @include mq("md") {
+        margin-top: prem(24);
+        font-size: prem(24);
+        line-height: prem(50);
+    }
+    
+}
+
+.c-service__item--coding{
+          background-color: rgba(255, 255, 255, 1); // F6D95C with transparency
+  border: 8px solid #B3B136;
+}
+.c-service__item--wp{
+      background-color: rgba(255, 255, 255, 1);  // blue tint
+  border: 8px solid #3682B3;
+}
+.c-service__item--ec{
+         background-color: rgba(255, 255, 255, 1);  // green tint
+  border: 8px solid #3F8854;
+}
+
+.js-serviceItemSticky{
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    &:nth-child(1){
+        top: 10%;
+    }
+    &:nth-child(2){
+        top: 20%;
+
+    }
+    &:nth-child(3){
+        top: 30%;
+    }
+}

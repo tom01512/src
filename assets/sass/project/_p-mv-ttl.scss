@@ -1,0 +1,28 @@
+@use '../foundation' as *;
+
+.p-mv__title {
+    width: 94%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.p-mv__title--container {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4vw;
+  position: fixed;
+  z-index: 12000;
+  transition: .4s all ease;
+
+}
+
+.p-mv__title--container h1 {
+  font-size: 9.6vw;
+  line-height: 1.1;
+  letter-spacing: 0.12em;
+  will-change: font-size;
+  transition: .4s all ease;
+  -webkit-text-stroke: 1px $color-black;
+}
+

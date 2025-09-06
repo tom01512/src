@@ -1,0 +1,168 @@
+@use '../foundation' as *;
+
+
+.p-header__drawer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.p-header__hamburger {
+  position: fixed;
+  top: 12px;
+  right: 24px;
+  z-index: 15000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 100vmax;
+  border: 1px solid #efefef;
+  background: #efefef;
+  cursor: pointer;
+
+  &:hover{
+    box-shadow: 0 0 20px #3682B3;
+
+    &::after,
+    &::before{
+      animation: pulsate 2s linear infinite;
+      content: "";
+    }
+  }
+
+
+  &::before,
+  &::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #3682B3;
+      border-radius: 50%;
+      box-sizing: border-box;
+      pointer-events: none;
+      
+    }
+
+  &::after {
+    animation-delay: 1s;
+  }
+
+  @include mq("md") {
+        top: 16px;
+        width: 40px;
+        height: 40px;
+  }
+
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+}
+
+.p-header__drawerNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 14000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  // is closed
+  &[aria-hidden="true"] {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  // is opened
+  &[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.p-header__drawerMenu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: prem(24);
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: $color-black;
+}
+
+
+.p-header__overlay{
+  position: fixed; //absoluteにするとbodyの高さによってグニョーンが伸びすぎてしまうので固定する
+  top: 0;
+  left: 0;
+  z-index: 3500;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.p-header__drawerMenu li{
+    list-style:none;
+}
+
+
+.p-drawerButton  {
+  position: relative;
+  font-size:prem(18);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding:prem(8) prem(24);
+  --width:100%;
+  --translateX:0;
+  font-family: $font-family-ttl;
+  letter-spacing: prem(2);
+  width: 160px;
+  border-radius:100vmax;
+  &::before {
+    content:"";
+    position: absolute;
+    inset:0;
+    height:100%;
+    border:0px solid #000;
+    border-radius:100vmax;
+    width:var(--width);
+    transform:translate(var(--translateX),0);
+
+  }
+
+  &:hover{
+    &::before{
+      border:1px solid #000;
+    }
+  }
+
+  i{
+    font-size: prem(36);
+  }
+}

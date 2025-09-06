@@ -1,0 +1,56 @@
+@use '../foundation' as *;
+.p-work{
+    position: relative;
+}
+
+.p-work__header{
+    text-align: center;
+    position: relative;
+    padding-top: prem(150);
+
+    @include mq("md") {
+        padding-top: prem(240);
+    }
+
+    a{
+        font-family: $fontEn-family-base;
+        font-size: prem(24);
+        letter-spacing: prem(6);
+        font-weight: bold;
+        line-height: 1;
+    }
+}
+
+.p-work__text{
+    display: grid;
+    grid-template-columns:1fr;
+    gap: prem(24);
+    
+}
+
+.p-work__text--link{
+    span{
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "";
+            width:  0%;
+            height: 2px;
+            background: #fff;
+            left: 0;
+            bottom: -4px;
+        }
+    }
+
+    &:hover{
+
+        span{
+            &::after{
+                width: 100%;
+                transition: .2s all ease;
+            }
+        }
+
+    }
+}
+
